@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "./Login";
+import Button from "./buttons";
 
 function Header()
 {
@@ -9,9 +10,10 @@ function Header()
       <h1>Seva</h1>
     </div>
         <div className="buttons">
-            <a href="#">home</a>
-            <a href="#">Contact</a>
-            <a href="#">Wallet</a>
+           <Button name="Home" />
+           <Button name="contact" />
+           <Button name="Wallet" />
+
         </div>
         <Login />
     </div>
