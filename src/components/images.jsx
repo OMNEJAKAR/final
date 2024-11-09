@@ -1,12 +1,13 @@
 const images = [
     {
-        url : "https://th.bing.com/th/id/OIP.GvntOdvz80txbfbW4rz2kAHaEo?rs=1&pid=ImgDetMain"
+        url : "https://tobijohnson.com/wp-content/uploads/2022/01/volunteers-needed-1024x551.jpg"
     },
     {
-        url : "https://wallpapercave.com/wp/wp2722928.jpg"
+        url : "https://thumbs.dreamstime.com/z/template-job-recruitment-job-vacancy-green-background-social-media-banner-design-template-job-recruitment-job-211766744.jpg"
     },
+    
     {
-        url : "https://wallpaperaccess.com/full/1688623.jpg"
+        url : "https://i.ytimg.com/vi/FVxlghInfpw/maxresdefault.jpg"
     }
 ];
 

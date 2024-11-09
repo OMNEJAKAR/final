@@ -1,42 +1,42 @@
-import React ,{useEffect, useState} from "react";
 
-function ImageSlider({slides})
+import React from "react";
+
+
+function  ImageSlider(props)
 {
-    const [currentIndex , setCurrentIndex] = useState(0);
-
-    useEffect(()=>
-    {
-        const intervalId = setInterval(()=>
-        {
-            setCurrentIndex(prevIndex => (prevIndex+1)%slides.length);
-        },2000);
-
-        return ()=>clearInterval(intervalId);
-    },[slides.length]);
-
-    const slideStyles = {
-        height : "100%",
-        position : "relative",
-      
-    }
-
-    const sliderStyle = {
+    const profileDiv = {
+        display : "flex",
         width : "100%",
-        height : "100%",
-        borderRadius : "10px",
-        backgroundPosition : 'center',
-        backgroundSize : "cover",
-        backgroundImage : `url(${slides[currentIndex].url})`,
-    
+        height : "400px",
+        justifyContent : "center",
     }
+    const profilepic = {
+        width : "90%",
+        height : "400px",
 
-
+    }
+    const imagediv = {
+        height: "100%",
+        width: "100%",
+        objectFit: "contain", // or "cover" depending on your requirement
+        borderRadius: "20px",  // Rounded corners
+    };   
+     const imageStyle = {
+        borderRadius: "20px",  // Apply borderRadius directly to the image
+        width: "100%",
+        height: "100%",
+    };
+    
     return (
-        <div style={sliderStyle} >
-        <div style={slideStyles}></div>
-            
+        <div>
+            <div style={profileDiv} >
+                <div style={profilepic}>
+                    <div style={imagediv}>
+                        <img  src={props.img} style={imageStyle}/>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
-
-export default ImageSlider;
+export default  ImageSlider;
