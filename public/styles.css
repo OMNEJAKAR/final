@@ -5,7 +5,9 @@
 
 body {
 
-  min-width: 100vh;
+  width: 100%;
+  background-color: rgb(155, 89, 182);
+
 }
 a {
   text-decoration: none;
@@ -22,18 +24,19 @@ a {
   margin: 20px;
   display: flex;
   align-items: center;
-  font-size: 30px;
+  font-size: 25px;
   
 }
 .buttons a{
   margin-right: 10px;
   font-size: 25px;
+  color : white;
   
 }
 .buttons {
   display: flex;
   align-items: center;
-  width : 80%;
+  width : 100%;
   justify-content: center;
 }
 
@@ -48,9 +51,8 @@ a {
 }
 .profile-div {
   display: flex;
-  flex-wrap: wrap;
   height : 100%;
-  width : 100%;
+  width : 80%;
   margin : 10px;
   margin-top: 20px;
   justify-content: center;
@@ -59,7 +61,7 @@ a {
 .Profile {
   display: flex;
   height : 100%;
-  width : 450px;
+  width : 400px;
   margin : 10px;
   background-color: pink;
   flex-direction: column;
@@ -90,8 +92,33 @@ a {
   align-items: center;
   justify-content: center;
 }
-  
+.content-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 98%;
+  background-color: lightblue;
+  margin: 20px;
+  border-radius: 10px;
 
+}
+.content-div-info {
+  width : 50%;
+  margin : 10px;
+}
+.img-div {
+  width : 50%;
+  display: flex;
+  justify-content: end;
 
-
+}
+.content-div img {
+  margin : 10px;
+  height : 280px;
+  border-radius: 10px;
+}
+.arrow {
+  display: none;
+}
 

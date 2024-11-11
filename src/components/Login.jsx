@@ -1,11 +1,21 @@
 import React from "react";
+// import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+
+// import LoginPage from "./LoginPage";
 
 function Login()
 {
     return (
-        <div>
-            <h1><a href="#">Login</a></h1>
-        </div>
+        // <Router>
+        //     <Routes>
+        //         <Route path="/" element={<Login />} /> 
+        //         <Route path="/login" element={<LoginPage />} /> 
+        //     </Routes>
+        // </Router>
+    <div className="title">
+        <h2>Login</h2>
+      </div>
+        
         
     );
 }
