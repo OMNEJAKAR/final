@@ -1,6 +1,8 @@
 import React from "react";
 import Login from "../Login";
 import Button from "../buttons";
+import AboutUs from "../AboutUs";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function Header()
 {
@@ -10,12 +12,18 @@ function Header()
         <h1>Seva</h1>
       </div>
         <div className="buttons">
-           <Button name="Home" path="https://www.google.com/" />
-           <Button name="contact" path="https://www.google.com/" /> 
-           <Button name="Wallet" path="https://www.google.com/"/>
+        <nav>
+          <Link  to="/">Home</Link>
+          <Link to="/aboutus">About</Link>
+          <Link  to="/">Events</Link>
+          <Link to="/aboutus">Profile</Link>
+          <Link to="/aboutus">Contact</Link>
+          <Link to="/aboutus">Wallet</Link>
+        </nav>
+
         </div>
         <Login />
-    </div>
+    </div>  
   
 );
 }
