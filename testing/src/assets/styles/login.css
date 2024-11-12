@@ -1,0 +1,90 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: url("../images/bg1.jpg") center/cover fixed no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+h2{
+    color:bisque
+}
+
+.login-container {
+    background-color: rgba(65, 32, 184, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(18, 21, 12);
+    text-align: center;
+    width: 300px;
+    height:250px;
+    padding: 10%;
+}
+
+#logo{
+    width: 120px;
+    height: 120px;
+    border-radius: 50% 50% 50% 50%; /*left-top then clockwise*/
+    background-color: #08ddfe;
+    box-shadow: 10px 5px 5px rgb(0, 0, 0);
+    object-fit: cover; 
+    position: absolute;
+    top:10%;
+    left:45%;
+    object-fit: cover;
+}
+
+.login-cred{
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin:6px;
+    background-color: #ce760a;
+    width:210px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position:relative;
+}
+
+button:hover {
+    background-color: #fa5e04;
+    border-radius: 10px;
+    border-bottom: 5px solid black;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+    border-color:yellow;
+    box-shadow: 0 0 10px rgb(79, 52, 126);
+}
+
+#signUp:hover{
+    border-bottom: 2px solid yellow;
+    box-shadow: 0 0 10px green;
+    color:#08ddfe;
+    text-decoration: none;
+}
+
+
+#logo:active{
+    transform:  scale(2.5); 
+}
+
+#error-message{
+    color:red;
+}
