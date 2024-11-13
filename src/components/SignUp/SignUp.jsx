@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../assets/styles/signup.css';
+import "./signup.css";
 
-const Signup1 = () => {
+const SignUp = () => {
     // State variables for form fields
     const [formData, setFormData] = useState({
         name: '',
@@ -73,9 +73,21 @@ const Signup1 = () => {
         }
       };
       
+      const bodyjai =
+      {
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "rgb(0, 0, 0)",
+        fontFamily: "Arial, sans-serif",
+        margin: "0px",
+        padding: "0px",
+        width:"100%",
+    }
 
     return (
-    
+        <div style={bodyjai}>
             <div className="form">
                 <img src="img1.jpg" alt="logo" id="form-logo" />
 
@@ -185,7 +197,8 @@ const Signup1 = () => {
                     </div>
                 </form>
             </div>
+            </div>
     );
 };
 
-export default Signup1;
+export default SignUp;

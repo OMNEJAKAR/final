@@ -1,8 +1,6 @@
 import React from "react";
-import Login from "../Login";
-import Button from "../buttons";
-import AboutUs from "../AboutUs";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import "./Header.css";
 
 function Header()
 {
@@ -19,10 +17,12 @@ function Header()
           <Link to="/aboutus">Profile</Link>
           <Link to="/aboutus">Contact</Link>
           <Link to="/aboutus">Wallet</Link>
+          
         </nav>
 
         </div>
-        <Login />
+        <Link to="/login" ><h1 className="title">Login</h1></Link>
+        {/* <Login /> */}
     </div>  
   
 );

@@ -1,0 +1,35 @@
+*{
+    margin :0;
+    padding: 0;
+    
+}
+a {
+    text-decoration: none;
+  }
+  .navbar {
+  
+    background: linear-gradient(to right, rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5));
+    overflow: auto;
+    display: flex;
+    height : 100px;
+    align-items: center;
+  }
+  .title {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    
+  }
+  .buttons a{
+    margin-right: 10px;
+    font-size: 25px;
+    color : white;
+    
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    width : 100%;
+    justify-content: center;
+  }

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "../assets/styles/login.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Header from "../Home/Header";
+import "./Login.css";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [name, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [users, setUsers] = useState([]);
@@ -17,7 +19,7 @@ const Login = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password }),  // username is the name (user's name)
+        body: JSON.stringify({ name, password }),  // username is the name (user's name)
       });
   
       const data = await response.json();
@@ -25,7 +27,8 @@ const Login = () => {
       if (response.ok) {
         console.log("Login successful, user:", data.name);  // Log successful login
         // Redirect to dashboard page with the name
-        window.location.href = `/dashboard?name=${data.name}`;
+        // window.location.href = `/dashboard?name=${data.name}`;
+        window.location.href = `/`;
       } else {
         console.error("Login failed:", data.error);  // Log error message if login fails
         setErrorMessage(data.error || "Invalid username or password");
@@ -38,17 +41,30 @@ const Login = () => {
     }
   };
   
-  
+  const bodyram = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh",
+    
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
+    backgroundRepeat: "no-repeat",
+    backgroundColor: "black",
+}
 
   return (
-    <div className="login-page">
+    <div >
+    <Header />
+    <div className="login-page" style={bodyram}>
       <img src="logo_image.png" alt="Logo" id="logo" />
       <div className="login-container">
         <h2>Login</h2>
         <form id="loginForm" onSubmit={handleSubmit}>
           <input
             type="text"
-            value={username}
+            value={name}
             onChange={(e) => setUsername(e.target.value)}
             className="login-cred"
             placeholder="Username"
@@ -70,8 +86,9 @@ const Login = () => {
         style={{ color: "white", position: "absolute", bottom: "22%", left: "35%" }}
         title="Create a new account"
       >
-        Don't have an account? <a id="signUp" href="signup">Sign Up</a>
+        Don't have an account? <Link to="/signup">SignUp</Link>
       </span>
+    </div>
     </div>
   );
 };

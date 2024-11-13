@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');  // To parse the body of POST requests
+const { redirect } = require("react-router-dom");
 
 dotenv.config();
 const app = express();
@@ -18,31 +19,43 @@ mongoose.connect("mongodb://localhost:27017/volunteer")
 const volunteerSchema = new mongoose.Schema({
     name: {
         type: String,
-    }
+    },
+    age:{
+        type:Number,
+    },
+    phone: {
+        type:Number,
+    },
+    email: {
+        type:String,
+    },
+    gender: {
+        type:String,
+    },
+    password:{
+        type : String
+    },
 });
 
-const Person = mongoose.model("person", volunteerSchema);
+
+const Person = mongoose.model("volunteer", volunteerSchema);
 
 app.get("/", async (req, res) => {
-    const volunteer1 = new Person({
-        name: "omkar"
-    });
-    // await volunteer1.save();
-
-    const volunteer2 = new Person({
-        name: "nixon"
-    });
-    // await volunteer2.save();
 
     res.send("All fine");
 });
 
-app.post('/aboutus', async (req, res) => {
+app.post('/signup', async (req, res) => {
     try {
-        const {name} = req.body;  // Get the 'name' from the body of the request
+        const {name,age,phone,email,gender,password} = req.body;  // Get the 'name' from the body of the request
 
         const newName = new Person({
             name: name,
+            age:age,
+            phone:phone,
+            email:email,
+            gender:gender,
+            password:password,
         });
 
         await newName.save();  // Save the new name to the database
@@ -54,7 +67,17 @@ app.post('/aboutus', async (req, res) => {
         res.status(500).json({ message: 'Failed to add name' });
     }
 });
-
+app.post("/login",async (req,res)=>
+{
+    const {name,password} = req.body;
+    const loggedPerson = await Person.find({name:name});
+    res.json(loggedPerson);
+    if(loggedPerson.length === 0) {
+        console.log("mo user found");
+        redirect("/login");
+    }
+    console.log(loggedPerson);
+})
 app.listen(5000, () => {
     console.log("server running at 5000 port");
 });
