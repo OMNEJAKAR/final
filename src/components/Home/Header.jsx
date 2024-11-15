@@ -11,20 +11,20 @@ function Header()
       </div>
         <div className="buttons">
         <nav>
-          <Link  to="/">Home</Link>
-          <Link to="/aboutus">About</Link>
-          <Link  to="/">Events</Link>
-          <Link to="/aboutus">Profile</Link>
-          <Link to="/aboutus">Contact</Link>
-          <Link to="/aboutus">Wallet</Link>
+          <Link  to="/" className="border-hover">Home</Link>
+          <Link to="/aboutus" className="border-hover">About</Link>
+          <Link  to="/" className="border-hover">Events</Link>
+          <Link to="/aboutus" className="border-hover">Profile</Link>
+          <Link to="/aboutus" className="border-hover">Contact</Link>
+          <Link to="/aboutus" className="border-hover">Wallet</Link>
           
         </nav>
 
         </div>
-        <Link to="/login" ><h1 className="title">Login</h1></Link>
+        <span className="Login"><Link to="/login" ><h1>Login</h1></Link></span>
         {/* <Login /> */}
     </div>  
-  
+
 );
 }
 

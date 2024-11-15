@@ -4,25 +4,30 @@
   }
   
   .login-container {
-    background-color: rgba(65, 32, 184, 0.2);
+    background-color: #ad00b0;
     border-radius: 10px;
     box-shadow: 10px 5px 5px rgb(18, 21, 12);
     text-align: center;
     width: 300px;
     height: 250px;
     padding: 10%;
+    position: absolute;
+    top : 32%;
   }
   
   #logo {
     width: 120px;
     height: 120px;
-    border-radius: 50% 50% 50% 50%; /*left-top then clockwise*/
+    border-radius: 50%; /*left-top then clockwise*/
     background-color: #08ddfe;
     box-shadow: 10px 5px 5px rgb(0, 0, 0);
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 45%;
     object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .login-cred {
@@ -36,7 +41,7 @@
   button {
     padding: 10px;
     margin: 6px;
-    background-color: #ce760a;
+    background-color: #fa5e04;
     width: 210px;
     color: white;
     border: none;

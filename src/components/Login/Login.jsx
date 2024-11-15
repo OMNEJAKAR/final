@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Header from "../Home/Header";
+import omkarImage from '../AllImages/omkar.jpg';
 import "./Login.css";
 
 const Login = () => {
@@ -51,14 +52,14 @@ const Login = () => {
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
     backgroundRepeat: "no-repeat",
-    backgroundColor: "black",
+    backgroundColor: "#0000ff",
 }
 
   return (
     <div >
     <Header />
     <div className="login-page" style={bodyram}>
-      <img src="logo_image.png" alt="Logo" id="logo" />
+      <img src={omkarImage} alt="Logo" id="logo" />
       <div className="login-container">
         <h2>Login</h2>
         <form id="loginForm" onSubmit={handleSubmit}>

@@ -24,7 +24,7 @@ const About = () => {
         slidesToScroll: 1,     // Number of profiles to scroll per swipe
         autoplay: true,        // Enable automatic sliding
         autoplaySpeed: 2000 ,   // Time in ms before auto-slide
-        arrows : false
+        arrows : false,
     };
     const sliderDiv = {
         dots: true,            // Display navigation dots
@@ -34,10 +34,22 @@ const About = () => {
         slidesToScroll: 1,     // Number of profiles to scroll per swipe
         autoplay: true,        // Enable automatic sliding
         autoplaySpeed: 2000,    // Time in ms before auto-slide
+        
     };
 
     return (
         <div >
+        <div className="content-heading">
+        <div className="wrapper">
+            <div className="static-txt">Welcome </div>
+            <ul className="dynamic-txt">
+            <li>
+             <span>To Seva...</span> 
+            </li></ul>
+        </div>
+        
+            {/* <h1>Welcome To Seva...</h1> */}
+        </div>
         <div className="About">
             {/* Image Slider */}
             <div style={imagesliderStyle}>
@@ -51,7 +63,7 @@ const About = () => {
             {/* Profile Slider */}
             <Slider {...settings}>
                 {recruiter.map((obj) => (
-                    <Recruite key={obj.key} image={obj.image} name={obj.name} />
+                    <Recruite key={obj.key} image={obj.image} name={obj.name} content={obj.content} />
                 ))}
             </Slider>
 

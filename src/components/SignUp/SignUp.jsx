@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Header from "../Home/Header";
+import omkarImage from '../AllImages/omkar.jpg';
 import "./signup.css";
 
 const SignUp = () => {
@@ -79,17 +81,24 @@ const SignUp = () => {
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
-        backgroundColor: "rgb(0, 0, 0)",
+        backgroundColor: "#0000ff",
         fontFamily: "Arial, sans-serif",
         margin: "0px",
         padding: "0px",
         width:"100%",
+        height : "900px",
+        display :"flex",
+        alignItems : "center",
+
     }
 
     return (
+        <div >
+        <Header />
         <div style={bodyjai}>
+        
             <div className="form">
-                <img src="img1.jpg" alt="logo" id="form-logo" />
+                <img src={omkarImage} alt="logo" id="form-logo" />
 
                 <form onSubmit={handleSubmit}>
                     <div className="form-user">
@@ -189,7 +198,7 @@ const SignUp = () => {
                         <div className="fields">
                             <label>
                                 <input type="checkbox" id="check" required />
-                                <span> I agree to the <a href="#">terms and conditions</a></span>
+                                <span> I agree to the <a href="https://www.termsfeed.com/live/a32df8a7-8f8c-4641-8542-9170ba1d2ad4">terms and conditions</a></span>
                             </label>
                         </div>
 
@@ -198,6 +207,7 @@ const SignUp = () => {
                 </form>
             </div>
             </div>
+        </div>
     );
 };
 
