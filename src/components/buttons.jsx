@@ -7,7 +7,6 @@ function Button(props)
     return (
         <div>
             <a href={props.path}>{props.name}</a>
-            {/* <Link to={props.App}>{props.name}</Link> */}
         </div>
     );
 }

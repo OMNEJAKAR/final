@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import images from "../images";  // Assuming images.js is in the same directory
+import images from "../images";  
 import ImageSlider from "../ImageSlider";
-import recruiter from "../recruiterarr";  // Assuming recruiterarr.js is in the same directory
-import Recruite from "../Recruite";  // Assuming Recruite.js is in the same directory
+import recruiter from "../recruiterarr";  
+import Recruite from "../Recruite";  
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./About.css";
@@ -17,23 +17,23 @@ const imagesliderStyle = {
 
 const About = () => {
     const settings = {
-        dots: true,            // Display navigation dots
-        infinite: true,        // Enable infinite loop
-        speed: 500,            // Transition speed in ms
-        slidesToShow: 3,       // Number of profiles visible at once
-        slidesToScroll: 1,     // Number of profiles to scroll per swipe
-        autoplay: true,        // Enable automatic sliding
-        autoplaySpeed: 2000 ,   // Time in ms before auto-slide
+        dots: true,             
+        infinite: true,         
+        speed: 500,             
+        slidesToShow: 3,        
+        slidesToScroll: 1,      
+        autoplay: true,         
+        autoplaySpeed: 2000 ,    
         arrows : false,
     };
     const sliderDiv = {
-        dots: true,            // Display navigation dots
-        infinite: true,        // Enable infinite loop
-        speed: 500,            // Transition speed in ms
-        slidesToShow: 1,       // Number of profiles visible at once
-        slidesToScroll: 1,     // Number of profiles to scroll per swipe
-        autoplay: true,        // Enable automatic sliding
-        autoplaySpeed: 2000,    // Time in ms before auto-slide
+        dots: true,             
+        infinite: true,         
+        speed: 500,             
+        slidesToShow: 1,        
+        slidesToScroll: 1,      
+        autoplay: true,         
+        autoplaySpeed: 2000,     
         
     };
 
@@ -48,10 +48,8 @@ const About = () => {
             </li></ul>
         </div>
         
-            {/* <h1>Welcome To Seva...</h1> */}
         </div>
         <div className="About">
-            {/* Image Slider */}
             <div style={imagesliderStyle}>
                 <Slider {...sliderDiv}>
                     {images.map((obj) => (
@@ -60,7 +58,6 @@ const About = () => {
                 </Slider>
             </div>
 
-            {/* Profile Slider */}
             <Slider {...settings}>
                 {recruiter.map((obj) => (
                     <Recruite key={obj.key} image={obj.image} name={obj.name} content={obj.content} />
