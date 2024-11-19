@@ -6,7 +6,7 @@ import "./signup.css";
 const SignUp = () => {
     // State variables for form fields
     const [formData, setFormData] = useState({
-        name: '',
+        username: '',
         age: '',
         phone: '',
         email: '',
@@ -41,7 +41,7 @@ const SignUp = () => {
         e.preventDefault();
         
         const signupData = {
-          name: formData.name,
+          username: formData.username,
           age: formData.age,
           phone: formData.phone,
           email: formData.email,
@@ -49,7 +49,7 @@ const SignUp = () => {
           password: formData.password,
           isRetailer: formData.isRetailer,
           retailerDetails: formData.isRetailer ? {
-            orgName: formData.orgName,
+            orgName: formData.storeName,
             address: formData.address,
             aadhaarNo: formData.aadhaarNo,
             profession: formData.profession
@@ -57,7 +57,7 @@ const SignUp = () => {
         };
       
         try {
-          const response = await fetch('http://localhost:5000/signup', {
+          const response = await fetch('http://localhost:5000/register', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -68,6 +68,7 @@ const SignUp = () => {
           const data = await response.json();
           console.log(data.message);
           if (response.ok) {
+             console.log(formData);
             window.location.href = "/login";
           }
         } catch (error) {
@@ -108,7 +109,7 @@ const SignUp = () => {
                                 <legend>User Details</legend>
                                 <div className="fields">
                                     <label htmlFor="name">Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Enter your name" required value={formData.name} onChange={handleChange} />
+                                    <input type="text" id="name" name="username" placeholder="Enter your name" required value={formData.name} onChange={handleChange} />
                                 </div>
                                 <div className="fields">
                                     <label htmlFor="age">Age</label>

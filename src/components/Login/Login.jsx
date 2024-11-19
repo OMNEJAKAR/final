@@ -5,7 +5,7 @@ import omkarImage from '../AllImages/omkar.jpg';
 import "./Login.css";
 
 const Login = () => {
-  const [name, setUsername] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [users, setUsers] = useState([]);
@@ -20,13 +20,15 @@ const Login = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, password }),  // username is the name (user's name)
+        body: JSON.stringify({ username, password }),  // username is the name (user's name)
       });
   
       const data = await response.json();
   
       if (response.ok) {
-        console.log("Login successful, user:", data.name);  // Log successful login
+        const userName = data.user.username;
+        localStorage.setItem('username',userName); 
+        console.log("Login successful, user:", data.user.username);  // Log successful login
         // Redirect to dashboard page with the name
         // window.location.href = `/dashboard?name=${data.name}`;
         window.location.href = `/`;
@@ -65,7 +67,7 @@ const Login = () => {
         <form id="loginForm" onSubmit={handleSubmit}>
           <input
             type="text"
-            value={name}
+            value={username}
             onChange={(e) => setUsername(e.target.value)}
             className="login-cred"
             placeholder="Username"

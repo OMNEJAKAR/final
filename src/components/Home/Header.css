@@ -1,54 +1,63 @@
 *{
-    margin :0;
-    padding: 0;
-    
+  margin :0;
+  padding: 0;
+  
 }
 a {
-    text-decoration: none;
-  }
+  text-decoration: none;
+}
 .border-hover:hover{
-    border: 2px solid green;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  .navbar {
+  border: 2px solid green;
+  padding: 10px;
+  border-radius: 10px;
+}
+.navbar {
+
+  background: white;
+  color : rgb(31, 10, 227);
+  overflow: auto;
+  display: flex;
+  height : 100px;
+  align-items: center;
+}
+.title {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 50px;
   
-    background: #afa8ba;
-    overflow: auto;
-    display: flex;
-    height : 100px;
-    align-items: center;
-  }
-  .title {
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    font-size: 25px;
-    
-  }
-  .Login {
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    font-size: 25px;
-    border : 2px solid green;
-    padding : 10px;
-    border-radius: 10px;
-  }
-  .Login:hover {
-    background-color: green;
-    transition: background-color 0.2s ease-out;
+  
+  
+}
+.log{
+float: left;
+}
+.Login {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  border : 2px solid green;
+  padding : 10px;
+  border-radius: 10px;
+  color : rgb(31, 10, 227);
+  background-color: green;
+}
+.Login:hover {
+  background-color: green;
+  transition: background-color 0.2s ease-out;
 }
 
-  .buttons a{
-    margin-right: 10px;
-    font-size: 25px;
-    color : white;
-    
-  }
-  .buttons {
-    display: flex;
-    align-items: center;
-    width : 100%;
-    justify-content: center;
-  }
+.buttons a{
+  margin-right: 10px;
+  font-size: 25px;
+  color : rgb(31, 10, 227);
+  
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  width : 100%;
+  justify-content: end;
+
+}
