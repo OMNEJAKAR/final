@@ -13,6 +13,10 @@ a:hover{
     color:greenyellow;
 }
 
+#abc{
+    position:absolute;
+    bottom: 25%;
+}
 legend{
     color:rgb(237, 145, 8);
     font-size: 1.00 em;
@@ -63,8 +67,8 @@ legend{
 }
 
 #fieldset-user{
-    min-height: 506.75px;
-    max-height: 506.75px;
+    min-height: 550.75px;
+    max-height: 550.75px;
 }
 
 input:focus{
@@ -84,13 +88,13 @@ textarea{
     grid-template-columns: 1fr;
     grid-gap: 15px;
     min-width: 370px;
-    min-height: 506.75px;
-    max-height: 506.75px;
+    min-height: 550.75px;
+    max-height: 550.75px;
     max-width: 370px;
     
 }
 .SC {
-    color: white;
+    color: black;
 }
 .form {
     max-width: 900px;
@@ -104,7 +108,7 @@ textarea{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:#ad00b0;
+ 
 }
 
 .form-user {
@@ -121,7 +125,7 @@ textarea{
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
-    align-items: flex-start;  /* Align fieldsets at the top */
+    align-items: flex-start;  
 }
 
 fieldset {
@@ -131,7 +135,7 @@ fieldset {
     padding: 19px;
     border-radius: 3%;
     min-width:370px;
-    min-height: 450px; /* Ensure both fieldsets have the same height */
+    min-height: 450px; 
     box-sizing: border-box;
 }
 
@@ -144,7 +148,7 @@ fieldset {
     display: flex;
     margin-bottom: 5px;
     font-weight: bold;
-    color: white;
+    color: #000;
 }
 
 input, select {
@@ -154,6 +158,7 @@ input, select {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
+    color: #000;
 }
 
 select option {
@@ -161,15 +166,15 @@ select option {
 }
 
 select:focus {
-    border-color: #2307f9; /* Green border when focused */
-    box-shadow: 0 0 10px rgba(220, 220, 8, 0.7); /* Glowing effect */
+    border-color: #2307f9;
+    box-shadow: 0 0 10px rgba(220, 220, 8, 0.7); 
 }
 select {
     color:rgb(163, 162, 70);
 }
 select option {
-    color: black; /* Text color for options */
-    padding: 10px; /* Padding inside the options */
+    color: black; 
+    padding: 10px;
 }
 
 .switch-container {
@@ -240,7 +245,7 @@ span {
     margin-top: 5px; 
     padding: 0; 
     font-weight: normal;
-    color: white; 
+    color: black; 
 }
 
 input :focus{

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Header from "../Home/Header";
-import omkarImage from '../AllImages/omkar.jpg';
+import omkarImage from '../AllImages/SEVA2.png';
 import "./Login.css";
 
 const Login = () => {
@@ -14,13 +14,12 @@ const Login = () => {
     e.preventDefault();
   
     try {
-      // Send a POST request to the backend with login data
       const response = await fetch("http://localhost:5000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password }),  // username is the name (user's name)
+        body: JSON.stringify({ username, password }),  
       });
   
       const data = await response.json();
@@ -28,12 +27,11 @@ const Login = () => {
       if (response.ok) {
         const userName = data.user.username;
         localStorage.setItem('username',userName); 
-        console.log("Login successful, user:", data.user.username);  // Log successful login
-        // Redirect to dashboard page with the name
-        // window.location.href = `/dashboard?name=${data.name}`;
+        console.log("Login successful, user:", data.user.username); 
+  
         window.location.href = `/`;
       } else {
-        console.error("Login failed:", data.error);  // Log error message if login fails
+        console.error("Login failed:", data.error);  
         setErrorMessage(data.error || "Invalid username or password");
         setUsername("");
         setPassword("");
@@ -63,7 +61,7 @@ const Login = () => {
     <div className="login-page" style={bodyram}>
       <img src={omkarImage} alt="Logo" id="logo" />
       <div className="login-container">
-        <h2>Login</h2>
+        <p id="p">Login</p>
         <form id="loginForm" onSubmit={handleSubmit}>
           <input
             type="text"
@@ -86,7 +84,7 @@ const Login = () => {
         {errorMessage && <p id="error-message">{errorMessage}</p>}
       </div>
       <span
-        style={{ color: "white", position: "absolute", bottom: "22%", left: "35%" }}
+        style={{ color: "black", position: "absolute", bottom: "22%",  right:"42%" }}
         title="Create a new account"
       >
         Don't have an account? <Link to="/signup">SignUp</Link>

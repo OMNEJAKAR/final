@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import Header from "../Home/Header";
-import omkarImage from '../AllImages/omkar.jpg';
+import omkarImage from '../AllImages/SEVA2.png';
 import "./signup.css";
 
 const SignUp = () => {
-    // State variables for form fields
     const [formData, setFormData] = useState({
         username: '',
         age: '',
@@ -19,7 +18,6 @@ const SignUp = () => {
         isRetailer: false
     });
 
-    // Handle input change for form fields
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         setFormData((prevData) => ({
@@ -28,15 +26,13 @@ const SignUp = () => {
         }));
     };
 
-    // Function to handle the toggle switch specifically
     const handleToggleRetailer = () => {
         setFormData((prevData) => ({
             ...prevData,
-            isRetailer: !prevData.isRetailer // Toggle the isRetailer state
+            isRetailer: !prevData.isRetailer 
         }));
     };
 
-    // Function to handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
         
@@ -142,14 +138,14 @@ const SignUp = () => {
                             <fieldset id="fieldset-retailer">
                                 <legend>Information</legend>
                                 <div className="switch-container">
-                                    <label htmlFor="retailerToggle" className='SC'>Do you want to be a retailer?</label>
+                                    <label htmlFor="retailerToggle" className='SC'  >Do you want to be a retailer?</label>
                                     <label className="switch">
                                         <input
                                             type="checkbox"
                                             id="retailerToggle"
                                             name="isRetailer"
                                             checked={formData.isRetailer}
-                                            onChange={handleToggleRetailer} // Toggle function here
+                                            onChange={handleToggleRetailer}
                                         />
                                         <span className="slider"></span>
                                     </label>
@@ -195,7 +191,6 @@ const SignUp = () => {
                             </fieldset>
                         </div>
 
-                        {/* Agreement and Submit Button */}
                         <div className="fields">
                             <label>
                                 <input type="checkbox" id="check" required />

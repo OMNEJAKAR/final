@@ -4,7 +4,11 @@
     display: flex;
     width : 100%;
     justify-content: center;
-    height : 50px;
+    height : 70px;
     align-items: center;
     position: absolute;
   }
+
+#ad, #an{
+  display: block;
+}

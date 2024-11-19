@@ -12,13 +12,12 @@ export default function AboutUs() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         
-        // Sending data to the server
         const response = await fetch("http://localhost:5000/aboutus/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify( {name} ), // Sending the name state to the server
+            body: JSON.stringify( {name} ), 
         });
 
         if (response.ok) {
@@ -26,7 +25,7 @@ export default function AboutUs() {
         } else {
             console.error("Failed to add name");
         }
-        setName(""); // Clear the input field
+        setName(""); 
     };
     
     return (
